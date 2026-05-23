@@ -1,0 +1,42 @@
+{
+	"fuzzyMatcher": {
+		"timestamps": {
+			"check": 1779410814419,
+			"download": 1779410814419
+		},
+		"verbose": false,
+		"filterProviders": true
+	},
+	"environmentVariables": {
+		"steamDirectory": "/var/home/philipp/.steam",
+		"userAccounts": [],
+		"romsDirectory": "",
+		"retroarchPath": "",
+		"raCoresDirectory": "",
+		"localImagesDirectory": ""
+	},
+	"previewSettings": {
+		"retrieveCurrentSteamImages": true,
+		"disableCategories": false,
+		"deleteDisabledShortcuts": false,
+		"imageZoomPercentage": 30,
+		"imageLoadStrategy": "loadLazy",
+		"hideUserAccount": false
+	},
+	"enabledProviders": [
+		"sgdb",
+		"steamCDN"
+	],
+	"batchDownloadSize": 50,
+	"dnsServers": [],
+	"language": "en-US",
+	"theme": "Deck",
+	"emudeckInstall": false,
+	"autoUpdate": true,
+	"offlineMode": false,
+	"navigationWidth": 0,
+	"clearLogOnTest": false,
+	"autoKillSteam": false,
+	"autoRestartSteam": false,
+	"version": 10
+}
