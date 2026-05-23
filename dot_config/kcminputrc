@@ -1,0 +1,7 @@
+[Libinput]
+PointerAcceleration=0.0
+PointerAccelerationProfile=2
+
+[Libinput][10462][4613][Valve Software Steam Controller]
+PointerAccelerationProfile=1
+ScrollFactor=2
