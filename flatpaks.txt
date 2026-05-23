@@ -1,0 +1,11 @@
+com.github.Matoking.protontricks
+com.github.tchx84.Flatseal
+com.vysp3r.ProtonPlus
+io.github.DenysMb.Kontainer
+io.github.flattool.Warehouse
+org.kde.filelight
+org.kde.gwenview
+org.kde.haruna
+org.kde.kcalc
+org.kde.okular
+org.mozilla.firefox
