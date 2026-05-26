@@ -1,0 +1,10 @@
+#!/bin/bash
+PROTON="$HOME/.local/share/Steam/compatibilitytools.d/Proton-GE Latest/proton"
+PREFIX="$HOME/.local/share/proton-ge-prefix"
+
+mkdir -p "$PREFIX"
+
+export STEAM_COMPAT_CLIENT_INSTALL_PATH="$HOME/.local/share/Steam"
+export STEAM_COMPAT_DATA_PATH="$PREFIX"
+
+exec python3 "$PROTON" waitforexitandrun "$1"

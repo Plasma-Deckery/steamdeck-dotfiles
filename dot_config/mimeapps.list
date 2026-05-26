@@ -1,0 +1,7 @@
+
+[Default Applications]
+x-scheme-handler/openwhispr=openwhispr.desktop
+application/x-ms-dos-executable=proton-ge-run.desktop
+application/x-msdos-program=proton-ge-run.desktop
+application/x-msdownload=proton-ge-run.desktop
+application/x-msi=proton-ge-run.desktop

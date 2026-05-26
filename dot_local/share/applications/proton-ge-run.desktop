@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Mit Proton-GE öffnen
+Exec=/home/philipp/.local/bin/proton-ge-run %f
+MimeType=application/x-ms-dos-executable;application/x-msi;application/x-msdos-program;application/x-msdownload;
+NoDisplay=false
+Terminal=false
