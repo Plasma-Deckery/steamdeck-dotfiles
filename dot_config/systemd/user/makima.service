@@ -6,7 +6,10 @@ After=graphical-session.target
 ExecStart=/home/philipp/.local/bin/makima
 Restart=on-failure
 RestartSec=3
-PassEnvironment=DISPLAY WAYLAND_DISPLAY
+Environment=WAYLAND_DISPLAY=wayland-0
+Environment=DISPLAY=:0
+Environment=XDG_SESSION_TYPE=wayland
+Environment=XDG_CURRENT_DESKTOP=KDE
 
 [Install]
 WantedBy=graphical-session.target
