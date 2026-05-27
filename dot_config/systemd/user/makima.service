@@ -1,0 +1,12 @@
+[Unit]
+Description=makima input remapper
+After=graphical-session.target
+
+[Service]
+ExecStart=/home/philipp/.local/bin/makima
+Restart=on-failure
+RestartSec=3
+PassEnvironment=DISPLAY WAYLAND_DISPLAY
+
+[Install]
+WantedBy=graphical-session.target
