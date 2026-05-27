@@ -28,6 +28,7 @@ CommandTitlebarWheel=Raise/Lower
 [Plugins]
 desktopchangeosdEnabled=true
 hidecursorEnabled=true
+maximized-window-gapsEnabled=true
 sheetEnabled=true
 translucencyEnabled=true
 wobblywindowsEnabled=true
