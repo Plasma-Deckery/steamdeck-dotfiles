@@ -1,0 +1,64 @@
+# Deckery — Steam Deck Default Config
+# Phase 1: GRAB_DEVICE = "false" → makima und Steam Input laufen parallel
+# Kein Konflikt, kein Ausfall. Erst testen, dann GRAB_DEVICE = "true" setzen.
+#
+# Button-Referenz Steam Deck:
+#   BTN_SOUTH   = A        BTN_NORTH   = X  (Kernel: BTN_X = BTN_NORTH = 307)
+#   BTN_EAST    = B        BTN_WEST    = Y  (Kernel: BTN_Y = BTN_WEST  = 308)
+#   BTN_TL      = L1       BTN_TR      = R1
+#   ABS_Z       = L2 (Trigger analog)
+#   ABS_RZ      = R2 (Trigger analog)
+#   BTN_THUMBL  = L3       BTN_THUMBR  = R3
+#   BTN_SELECT  = Select   BTN_START   = Start
+#   BTN_MODE    = Steam Button
+
+[remap]
+# --- Maus-Klicks (Trigger als Buttons) ---
+BTN_TL2 = ["BTN_RIGHT"]  # L2 → Rechtsklick
+BTN_TR2 = ["BTN_LEFT"]   # R2 → Linksklick
+
+# --- Basis-Navigation ---
+BTN_DPAD_UP    = ["KEY_UP"]
+BTN_DPAD_DOWN  = ["KEY_DOWN"]
+BTN_DPAD_LEFT  = ["KEY_LEFT"]
+BTN_DPAD_RIGHT = ["KEY_RIGHT"]
+BTN_SOUTH      = ["KEY_ENTER"]   # A
+BTN_EAST       = ["KEY_ESC"]     # B
+BTN_NORTH      = ["KEY_BACKSPACE"]  # X  (BTN_NORTH = BTN_X = physisch X-Button)
+BTN_WEST       = ["KEY_SPACE"]   # Y  (BTN_WEST  = BTN_Y = physisch Y-Button)
+BTN_SELECT     = ["KEY_TAB"]
+BTN_START      = ["KEY_LEFTMETA"]
+
+# --- Modifier-Buttons ---
+BTN_TL = ["KEY_LEFTCTRL"]   # L1
+BTN_TR = ["KEY_LEFTALT"]    # R1
+
+# --- Back-Paddles ---
+BTN_GRIPL2  = ["KEY_LEFTMETA"]   # L4 (unten links)  → Super/Win
+BTN_GRIPL   = ["KEY_LEFTSHIFT"]  # L5 (oben links)   → Shift
+BTN_GRIPR2  = ["KEY_PAGEDOWN"]   # R4 (unten rechts) → PageDown
+BTN_GRIPR   = ["KEY_PAGEUP"]     # R5 (oben rechts)  → PageUp
+
+# --- Sprachsteuerung: L1 + R4 → OpenWhispr (Ctrl + PageDown) ---
+BTN_TL-BTN_GRIPR2 = ["KEY_LEFTCTRL", "KEY_PAGEDOWN"]
+
+# --- Steam-Layer: Steam+X → OSK (Steam Input übernimmt, makima blockt Backspace) ---
+BTN_MODE-BTN_NORTH = []  # Steam+X: makima tut nichts, Steam Input öffnet OSK
+
+# --- QAM-Button (Drei Punkte) ---
+# BTN_BASE = ["..."]  # ← TODO: Belegung festlegen
+
+[commands]
+# Shell-Commands können hier eingetragen werden, z.B.:
+# BTN_MODE = ["notify-send 'Deckery' 'Steam Deck Mode aktiv'"]
+
+[settings]
+# Linker Stick → deaktiviert (Kando nutzt Achswerte direkt via Gamepad API)
+LSTICK = "disabled"
+
+# Rechter Stick → deaktiviert (Steam Input übernimmt Cursor-Bewegung)
+RSTICK = "disabled"
+
+16_BIT_AXIS = "true"   # Steam Deck nutzt 16-bit Achswerte wie Xbox
+GRAB_DEVICE = "false"  # PHASE 1: false = safe, kein Konflikt mit Steam Input
+                       # PHASE 2: auf "true" setzen + Steam Desktop Config deaktivieren
