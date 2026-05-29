@@ -11,6 +11,7 @@ kpackagetool6 --type=KWin/Script -u "$repo_dir" 2>/dev/null || \
   kpackagetool6 --type=KWin/Script -i "$repo_dir"
 
 kwriteconfig6 --file kwinrc --group Plugins --key kyaniteEnabled true
+kwriteconfig6 --file kwinrc --group Script-kyanite --key forceVerticalGrid true
 
 qdbus org.kde.KWin /Scripting org.kde.kwin.Scripting.unloadScript kyanite >/dev/null 2>&1 || true
 qdbus org.kde.KWin /Scripting org.kde.kwin.Scripting.start >/dev/null 2>&1 || true
