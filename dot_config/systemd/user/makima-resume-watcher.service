@@ -1,0 +1,11 @@
+[Unit]
+Description=Restart makima after suspend/resume
+After=graphical-session.target
+
+[Service]
+ExecStart=/home/philipp/.local/bin/makima-resume-watcher
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target
