@@ -23,3 +23,7 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
+
+# Required for audio production software (e.g. REAPER) to connect to the
+# PipeWire session socket and start the audio interface correctly.
+export PIPEWIRE_REMOTE=/run/user/1000/pipewire-0
