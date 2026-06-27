@@ -1,0 +1,18 @@
+[00007707-cae2-4fcf-9d56-4a6c9fcf4b00]
+Description=Firefox Picture-in-Picture
+above=true
+aboverule=3
+activity=00000000-0000-0000-0000-000000000000
+activityrule=2
+desktops=\\0
+desktopsrule=2
+title=Picture-in-Picture
+titlematch=1
+types=1
+wmclass=\sorg.mozilla.firefox
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=1
+rules=00007707-cae2-4fcf-9d56-4a6c9fcf4b00
