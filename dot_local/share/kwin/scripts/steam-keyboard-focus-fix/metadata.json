@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Id": "steam-keyboard-focus-fix",
+        "Name": "Steam Keyboard Focus Fix",
+        "Description": "Returns focus to the previous window when the Steam on-screen keyboard appears",
+        "Version": "1.0"
+    }
+}
