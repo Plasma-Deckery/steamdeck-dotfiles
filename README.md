@@ -1,99 +1,36 @@
-# Steam Deck Dotfiles Guide
+# Steam Deck Dotfiles
 
-This repository contains the tracked configuration for the Steam Deck setup.
+An opinionated KDE Plasma desktop setup tuned for the Steam Deck's screen size and input methods. Part of [Plasma Deckery](https://github.com/Plasma-Deckery/deckery).
 
-## Goals
+The goal is a desktop that works well with a controller and no keyboard — clean, fast to navigate, and organised so you always know where things are.
 
-- Reproduce the current system state after reinstall.
-- Keep all trackable configuration under version control.
-- Document every non-trackable or partially trackable step.
+![Desktop layout with activities](docs/assets/dotfiles-activities.png)
 
-## Current Scope
+## What it does
 
-Tracked with chezmoi + git:
+**Activities and workspaces** — KDE Activities keep different contexts separate (Coding, Gaming, Music, etc.). Each activity has its own virtual desktops, each holding one or two apps in tiling mode that automatically fill the screen.
 
-- Shell: bashrc, git config, other safe shell config files
-- KDE: core Plasma and KWin user config files
-- VS Code: extension list and selected editor config files
-- Package manifests: Brewfile
+<video src="docs/assets/tiling.mp4" controls autoplay loop muted></video>
 
-Not automatically tracked:
+**Dynamic workspace management** — a KWin script ([Kyanite](https://github.com/Plasma-Deckery/kyanite)) ensures there is always one free desktop at the end of the list. Workspaces are created and cleaned up automatically.
 
-- Flatpak installs from Flathub
-- Actions done via Bazzite portal
-- Decky Loader install steps
-- Secrets and credentials
+<video src="docs/assets/desktopswitch.mp4" controls autoplay loop muted></video>
 
-## Base Requirements
+**Focus follows mouse** — moving the cursor to a window focuses it immediately, no clicking required.
 
-Install or ensure availability of:
+**Voice input** — RNNoise PipeWire filter for noise suppression, works together with [OpenWhispr](https://github.com/OpenWhispr/openwhispr) for hotkey-activated speech-to-text.
 
-- git
-- chezmoi
-- Homebrew
-- gh (GitHub CLI)
+→ [Full documentation](https://plasma-deckery.github.io/deckery/projects/steamdeck-dotfiles/)
 
-Optional later:
+## Installation
 
-- devbox
-- nix and home-manager
+These dotfiles are managed with [chezmoi](https://www.chezmoi.io/):
 
-## Repository Bootstrap on a Fresh System
+```bash
+chezmoi init https://github.com/Plasma-Deckery/steamdeck-dotfiles
+chezmoi apply
+brew bundle
+xargs flatpak install < flatpaks.txt
+```
 
-1. Install chezmoi.
-2. Initialize from this repo.
-3. Apply dotfiles.
-4. Install brew packages from Brewfile.
-5. Restore Flatpaks from flatpak list file.
-6. Perform documented non-trackable steps manually.
-
-## Daily Workflow
-
-1. Make system/config change.
-2. Add changed config file with chezmoi add if needed.
-3. Export package manifests when package state changed.
-4. Update documentation for non-trackable actions.
-5. Commit and push.
-
-## Flatpak Policy
-
-Flatpaks are not auto-committed.
-After each Flatpak change, regenerate the manifest file and commit it.
-
-Example command:
-
-flatpak list --app --columns=application | sort > flatpaks.txt
-
-## Non-Trackable Changes Log
-
-If you do anything via Bazzite portal or installers that do not map cleanly to config files, document it under this section.
-
-Template:
-
-- Date:
-- Action:
-- Tool or portal used:
-- Why needed:
-- How to reproduce on fresh system:
-- Verification:
-
-## Security Rules
-
-Never commit:
-
-- .env files
-- API keys or tokens
-- credentials files
-- private keys
-
-If a secret is accidentally committed:
-
-1. rotate secret immediately
-2. remove from repository history
-3. force-push only after validation
-
-## Next Planned Steps
-
-1. Add flatpaks.txt to tracked files and keep it updated.
-2. Add a reproducible Decky Loader section once method is fixed.
-3. Decide on devbox install timing and track first install commit.
+See the [Chezmoi & Tracking](https://plasma-deckery.github.io/deckery/projects/steamdeck-dotfiles/chezmoi/) page for the full details.
