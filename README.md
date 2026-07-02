@@ -22,15 +22,8 @@ The goal is a desktop that works well with a controller and no keyboard — clea
 
 → [Full documentation](https://plasma-deckery.github.io/deckery/projects/steamdeck-dotfiles/)
 
-## Installation
+## Using these configs
 
-These dotfiles are managed with [chezmoi](https://www.chezmoi.io/):
+This repo contains personal dotfiles managed with [chezmoi](https://www.chezmoi.io/). The configs are not designed to be applied wholesale — they cover a full personal system setup and may overwrite unrelated settings.
 
-```bash
-chezmoi init https://github.com/Plasma-Deckery/steamdeck-dotfiles
-chezmoi apply
-brew bundle
-xargs flatpak install < flatpaks.txt
-```
-
-See the [Chezmoi & Tracking](https://plasma-deckery.github.io/deckery/projects/steamdeck-dotfiles/chezmoi/) page for the full details.
+If you want to adopt parts of this setup, browse the files directly and apply what's relevant to you manually. The documentation above explains what each piece does.
