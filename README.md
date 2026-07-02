@@ -12,6 +12,8 @@ The goal is a desktop that works well with a controller and no keyboard — clea
 
 <video src="docs/assets/tiling.mp4" controls autoplay loop muted></video>
 
+**Window tiling** — [Kröhnkite](https://github.com/esjeon/krohnkite) provides dynamic window tiling so windows automatically arrange to fill the screen. [maximized-window-gaps](https://github.com/Plasma-Deckery/maximized-window-gaps) adds configurable gaps around tiled windows.
+
 **Dynamic workspace management** — a KWin script ([Kyanite](https://github.com/Plasma-Deckery/kyanite)) ensures there is always one free desktop at the end of the list. Workspaces are created and cleaned up automatically.
 
 <video src="docs/assets/desktopswitch.mp4" controls autoplay loop muted></video>
