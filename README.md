@@ -4,6 +4,8 @@ An opinionated KDE Plasma desktop setup tuned for the Steam Deck's screen size a
 
 The goal is a desktop that works well with a controller and no keyboard — clean, fast to navigate, and organised so you always know where things are.
 
+→ **[Full documentation with rationale and setup instructions](https://plasma-deckery.github.io/deckery/projects/steamdeck-dotfiles/)**
+
 ![Desktop layout with activities](docs/assets/dotfiles-activities.png)
 
 ## What it does
