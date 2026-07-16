@@ -1,8 +1,12 @@
 {
-    "KPlugin": {
-        "Id": "steam-keyboard-focus-fix",
-        "Name": "Steam Keyboard Focus Fix",
-        "Description": "Returns focus to the previous window when the Steam on-screen keyboard appears",
-        "Version": "1.0"
-    }
+  "KPackageStructure": "KWin/Script",
+  "KPlugin": {
+    "Description": "Returns focus to the previous window when the Steam on-screen keyboard appears",
+    "Id": "steam-keyboard-focus-fix",
+    "Name": "Steam Keyboard Focus Fix",
+    "Version": "1.0"
+  },
+  "X-Plasma-API": "javascript",
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "X-Plasma-MainScript": "code/main.js"
 }
